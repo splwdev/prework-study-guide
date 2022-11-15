@@ -18,87 +18,95 @@
       <!-- Student code goes here -->
       <section class="card">
         <h1>Git Notes</h1>
-        <div class="gitnotes">
-            <h2>Setup & Init</h2>
-            <h4>Configuring user information used across all local repositories, initializing and cloning repositories</h4>
-            <ul>
-            <li>git config --global user.name "[firstname lastname]"</li>set a name that is identifiable for credit when review version history 
-            <li>git config --global user.email "[valid-email]" </li>set an email address that will be associated with each history marker
-            <li>git config --global color.ui auto </li>set automatic command line coloring for Git for easy reviewing
-            <li>git init </li>initialize an existing directory as a Git repository
-            <li>git clone [url] </li>retrieve an entire repository from a hosted location via URL
-            </ul>
+        <div>
+            <div class="gitnotes top left">
+                <h2>Setup & Init</h2>
+                <h4>Configuring user information used across all local repositories, initializing and cloning repositories</h4>
+                <ul>
+                <li>git config --global user.name "[firstname lastname]"</li>set a name that is identifiable for credit when review version history 
+                <li>git config --global user.email "[valid-email]" </li>set an email address that will be associated with each history marker
+                <li>git config --global color.ui auto </li>set automatic command line coloring for Git for easy reviewing
+                <li>git init </li>initialize an existing directory as a Git repository
+                <li>git clone [url] </li>retrieve an entire repository from a hosted location via URL
+                </ul>
+            </div>
+            <div class="gitnotes top right">
+                <h2>Stage & Snapshot</h2>
+                <h4>Working with snapshots and the Git staging area</h4>
+                <ul>
+                <li>git status </li>checks what branch we are currently on
+                <li>git add -A [file] </li>used to commit all iles in he working branch
+                <li>git reset </li>unstage a file while retaining the changes in working directory
+                <li>git diff </li>diff of what is changed but not staged
+                <li>git diff --staged </li>diff of what is staged but not yet commited
+                <li>git commit -m "[message]" </li>commit your staged content as a new commit snapshot
+                </ul>
+            </div>
         </div>
-        <div class="gitnotes">
-            <h2>Stage & Snapshot</h2>
-            <h4>Working with snapshots and the Git staging area</h4>
-            <ul>
-            <li>git status </li>checks what branch we are currently on
-            <li>git add -A [file] </li>used to commit all iles in he working branch
-            <li>git reset </li>unstage a file while retaining the changes in working directory
-            <li>git diff </li>diff of what is changed but not staged
-            <li>git diff --staged </li>diff of what is staged but not yet commited
-            <li>git commit -m "[message]" </li>commit your staged content as a new commit snapshot
-            </ul>
+        <div>
+            <div class="gitnotes left">
+                <h2>Branch & Merge</h2>
+                <h4>Isolating work in branches, changing context, and integrating changes</h4>
+                <ul>
+                <li>git branch </li>list your branches. a * will appear next to the currently active branch
+                <li>git branch [branch-name] </li>create a new branch at the current commit
+                <li>git checkout [branch-name] </li>switch to another branch and check it out into your working directory
+                <li>git merge [branch]</li>merge the specified branchs history into the current one
+                </ul>
+            </div>
+            <div class="gitnotes right">
+                <h2>Inspect & Compare</h2>
+                <h4>Examining logs, diffs and object information</h4>
+                <ul>
+                <li>git log </li>show all commits in the current branchs history
+                <li>git log branchB..branchA </li>show the commits on branchA that are not on branchB
+                <li>git log --follow [file] </li>show the commits that changed file, even across renames
+                <li>git diff branchB...branchA </li>show the diff of what is in branchA that is not in branchB
+                <li>git show [SHA] </li>show any object in Git in human-readable format
+                </ul>
+            </div>
         </div>
-        <div class="gitnotes">
-            <h2>Branch & Merge</h2>
-            <h4>Isolating work in branches, changing context, and integrating changes</h4>
-            <ul>
-            <li>git branch </li>list your branches. a * will appear next to the currently active branch
-            <li>git branch [branch-name] </li>create a new branch at the current commit
-            <li>git checkout [branch-name] </li>switch to another branch and check it out into your working directory
-            <li>git merge [branch]</li>merge the specified branchs history into the current one
-            </ul>
+        <div>
+            <div class="gitnotes left">
+                <h2>Tracking Path Changes</h2>
+                <h4>Versioning file removes and path changes</h4>
+                <ul>
+                <li>git rm [file] </li>delete the file from project and stage the removal for commit
+                <li>git mv [existing-path] [new-path] </li>change an existing file path and stage the move
+                <li>git log --stat -M </li>show all commit logs with indication of any paths that moved
+                </ul>
+            </div>
+            <div class="gitnotes right">
+                <h2>Share & Update</h2>
+                <h4>Retrieving updates from another repository and updating local repos</h4>
+                <ul>
+                <li>git remote add [alias] [url] </li>add a git URL as an alias
+                <li>git fetch [alias] </li>fetch down all the branches from that Git remote
+                <li>git merge [alias]/[branch] </li>merge a remote branch into your current branch to bring it up to date
+                <li>git push [alias] [branch] </li>Transmit local branch commits to the remote repository branch
+                <li>git pull </li>fetch and merge any commits from the tracking remote branch
+                </ul>
+            </div>
         </div>
-        <div class="gitnotes">
-            <h2>Inspect & Compare</h2>
-            <h4>Examining logs, diffs and object information</h4>
-            <ul>
-            <li>git log </li>show all commits in the current branchs history
-            <li>git log branchB..branchA </li>show the commits on branchA that are not on branchB
-            <li>git log --follow [file] </li>show the commits that changed file, even across renames
-            <li>git diff branchB...branchA </li>show the diff of what is in branchA that is not in branchB
-            <li>git show [SHA] </li>show any object in Git in human-readable format
-            </ul>
-        </div>
-        <div class="gitnotes">
-            <h2>Tracking Path Changes</h2>
-            <h4>Versioning file removes and path changes</h4>
-            <ul>
-            <li>git rm [file] </li>delete the file from project and stage the removal for commit
-            <li>git mv [existing-path] [new-path] </li>change an existing file path and stage the move
-            <li>git log --stat -M </li>show all commit logs with indication of any paths that moved
-            </ul>
-        </div>
-        <div class="gitnotes">
-            <h2>Share & Update</h2>
-            <h4>Retrieving updates from another repository and updating local repos</h4>
-            <ul>
-            <li>git remote add [alias] [url] </li>add a git URL as an alias
-            <li>git fetch [alias] </li>fetch down all the branches from that Git remote
-            <li>git merge [alias]/[branch] </li>merge a remote branch into your current branch to bring it up to date
-            <li>git push [alias] [branch] </li>Transmit local branch commits to the remote repository branch
-            <li>git pull </li>fetch and merge any commits from the tracking remote branch
-            </ul>
-        </div>
-        <div class="gitnotes">
-            <h2>Rewrite History</h2>
-            <h4>Rewriting branches, updating commits and clearing history</h4>
-            <ul>
-            <li>git rebase [branch] </li>checks what branch we are currently onapply any commits of current branch ahead of specified one
-            <li>git reset --hard [commit] </li>clear staging area, rewrite working tree from specified commit
-            </ul>
-        </div>
-        <div class="gitnotes">
-            <h2>Temporary Commits</h2>
-            <h4>Temporarily store modified, tracked files in order to change branches</h4>
-            <ul>
-            <li>git stash </li>Save modified and staged changes
-            <li>git stash list </li>list stack-order of stashed file changes
-            <li>git stash pop </li>write working from top of stash stack
-            <li>git stash drop </li>discard the changes from top of stash stack
-            </ul>
+        <div>
+            <div class="gitnotes left">
+                <h2>Rewrite History</h2>
+                <h4>Rewriting branches, updating commits and clearing history</h4>
+                <ul>
+                <li>git rebase [branch] </li>checks what branch we are currently onapply any commits of current branch ahead of specified one
+                <li>git reset --hard [commit] </li>clear staging area, rewrite working tree from specified commit
+                </ul>
+            </div>
+            <div class="gitnotes right">
+                <h2>Temporary Commits</h2>
+                <h4>Temporarily store modified, tracked files in order to change branches</h4>
+                <ul>
+                <li>git stash </li>Save modified and staged changes
+                <li>git stash list </li>list stack-order of stashed file changes
+                <li>git stash pop </li>write working from top of stash stack
+                <li>git stash drop </li>discard the changes from top of stash stack
+                </ul>
+            </div>
         </div>
       </section>
     </main>
