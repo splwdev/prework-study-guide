@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Notes</title>
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style2.css">
 </head>
 <body>
     <header id="top">
@@ -16,11 +17,48 @@
     <main>
       <!-- Student code goes here -->
       <section class="card" id="html-section">
-        <h2>HTML</h2>
-        <ul>
-          <li>The head element contains information about the webpage such as the title, scripts and stylesheets used.</li>
-          <li>The body element represents the visible content shown to the user. There can only be a single body element in the HTML document.</li>
-        </ul>
+        <h1>HTML Notes</h1>
+        <div>
+            <div class="htmlnotes top left">
+                <h4>Document Metadata</h4>
+                <ul>
+                  <li>base</li>specifies the base URL to use for all relative URLs in a document. There can only be 1 base element in a document 
+                  <li>head</li>contains machine-readable information abou the document i.e. title, scripts and stylesheets
+                  <li>link</li>specifies relationships between current document and an external resource. Most commonly used to link to CSS files
+                  <li>meta</li>represents Metadata that cannot be represented by other HTML meta-related elements
+                  <li>style</li>contains style information for a document, or part of a document
+                  <li>title</li>defines the document's title that is shown in the browsers title bar or page tab
+                </ul>
+            </div>
+            <div class="htmlnotes top right">
+                <h4>Sectioning Root</h4>
+                <ul>
+                  <li>body</li>represents the content of an HTML document
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="htmlnotes left">
+                <h4>Content Sectioning</h4>
+                <ul>
+                  <li>address</li>indicates that the enclosed HTML provides contact information for a person or people, or an organisation 
+                  <li>article</li>represents a self contained composition in a document, page, application, or site
+                  <li>aside</li>represents a portion of a document whose content is only indirectly related to the documens main content. Typical use is a sidebar
+                  <li>footer</li>represents a footer for its nearest ancestor sectioning content or root element
+                  <li>header</li>represents introductory content such as heading, logo, etc
+                  <li>h1,h2,h3,h4,h5,h6</li>represents 6 levels of section headings
+                  <li>main</li>represents the dominant content of the body of a document
+                  <li>nav</li>represents a section of a page whose purpose is to provide navigational links
+                  <li>section</li>represents a generic standalone section of a document
+                </ul>
+            </div>
+            <div class="htmlnotes right">
+                <h4>Sectioning Root</h4>
+                <ul>
+                  <li>body</li>represents the content of an HTML document
+                </ul>
+            </div>
+        </div>
       </section>
     </main>
 </body>
